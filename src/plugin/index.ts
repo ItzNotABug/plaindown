@@ -225,7 +225,9 @@ export function plaindown(userOptions: PlaindownOptions = {}): Plugin {
 						`indexed ${cachedFileCount} markdown ${cachedFileCount === 1 ? "entry" : "entries"} (${cachedChunkCount} ${cachedChunkCount === 1 ? "chunk" : "chunks"})`,
 					);
 				} else {
-					Logger.success(`indexed ${cachedFileCount} markdown ${cachedFileCount === 1 ? "entry" : "entries"}`);
+					Logger.success(
+						`indexed ${cachedFileCount} markdown ${cachedFileCount === 1 ? "entry" : "entries"}`,
+					);
 				}
 			}
 		},
@@ -282,7 +284,9 @@ export const chunks = undefined;`;
 					const bundleSizeKB = (bundleSize / 1024).toFixed(2);
 
 					if (bundleSize > 512000) {
-						Logger.warn(`Large bundle: ${bundleSizeKB}KB (consider emit: true or experimental.chunks)`);
+						Logger.warn(
+							`Large bundle: ${bundleSizeKB}KB (consider emit: true or experimental.chunks)`,
+						);
 					}
 
 					return code;
@@ -309,7 +313,9 @@ export const chunks = undefined;`;
 					`indexed ${cachedFileCount} markdown ${cachedFileCount === 1 ? "entry" : "entries"} (${cachedChunkCount} ${cachedChunkCount === 1 ? "chunk" : "chunks"})`,
 				);
 			} else {
-				Logger.success(`indexed ${cachedFileCount} markdown ${cachedFileCount === 1 ? "entry" : "entries"}`);
+				Logger.success(
+					`indexed ${cachedFileCount} markdown ${cachedFileCount === 1 ? "entry" : "entries"}`,
+				);
 			}
 
 			server.middlewares.use(createPlaindownMiddleware(config, () => manifest, options));
