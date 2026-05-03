@@ -1,0 +1,61 @@
+{
+	"name": "@itznotabug/plaindown",
+	"version": "0.1.0",
+	"description": "A Vite/VitePress plugin that emits plain Markdown endpoints",
+	"type": "module",
+	"exports": {
+		"./plugin": {
+			"types": "./dist/plugin.d.ts",
+			"import": "./dist/plugin.js"
+		},
+		"./runtime": {
+			"types": "./dist/runtime.d.ts",
+			"import": "./dist/runtime.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "bun run typecheck && tsc --project tsconfig.build.json",
+		"clean": "rm -rf dist && rm -rf node_modules",
+		"format": "biome format --write .",
+		"lint": "biome lint .",
+		"check": "biome check .",
+		"check:write": "biome check --write .",
+		"typecheck": "tsc --noEmit",
+		"test": "bun test",
+		"test:watch": "bun test --watch"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.13",
+		"@types/bun": "1.3.13",
+		"@types/node": "25.6.0",
+		"typescript": "6.0.3"
+	},
+	"peerDependencies": {
+		"vite": "^5.0.0 || ^6.0.0",
+		"vitepress": "^1.0.0",
+		"vue": "^3.3.0"
+	},
+	"engines": {
+		"bun": ">=1.0.0"
+	},
+	"keywords": [
+		"vite",
+		"vitepress",
+		"markdown",
+		"plugin",
+		"bun"
+	],
+	"author": "itznotabug",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ItzNotABug/plaindown.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ItzNotABug/plaindown/issues"
+	},
+	"homepage": "https://github.com/ItzNotABug/plaindown#readme"
+}
