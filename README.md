@@ -2,6 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/@itznotabug/plaindown.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/@itznotabug/plaindown)
 [![License](https://img.shields.io/npm/l/%40itznotabug%2Fplaindown?logo=apache&logoColor=white&color=blue)](https://github.com/ItzNotABug/plaindown/blob/main/LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/ItzNotABug/plaindown/ci.yml?logo=github&label=CI)](https://github.com/ItzNotABug/plaindown/actions/workflows/ci.yml)
+[![Previews](https://img.shields.io/badge/Previews-pkg.vc-blueviolet)](https://pkg.vc/)
 [![Vite](https://img.shields.io/badge/Vite-5.x%20|%206.x%20-646CFF.svg?logo=vite&logoColor=white)](https://vite.dev/)
 [![VitePress](https://img.shields.io/badge/VitePress-1.x-5a67d8.svg?logo=vitepress&logoColor=white)](https://vitepress.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-ready-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
