@@ -44,9 +44,18 @@
 	"keywords": [
 		"vite",
 		"vitepress",
+		"vite-plugin",
+		"vitepress-plugin",
 		"markdown",
-		"plugin",
-		"bun"
+		"bun",
+		"markdown-endpoint",
+		"markdown-api",
+		"ai-seo",
+		"geo",
+		"llm",
+		"content-syndication",
+		"documentation",
+		"frontmatter"
 	],
 	"author": "itznotabug",
 	"license": "Apache-2.0",
