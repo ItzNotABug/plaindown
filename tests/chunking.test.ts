@@ -46,7 +46,7 @@ describe("experimental.chunks", () => {
 		// Parse manifest - extract JSON from the generated code
 		const manifestMatch = manifestCode?.match(/export const plaindownManifest = ({[\s\S]*?});/);
 		expect(manifestMatch).toBeDefined();
-		const manifest = JSON.parse(manifestMatch?.[1]);
+		const manifest = JSON.parse(manifestMatch?.[1] as string);
 
 		// Check chunk mappings
 		expect(manifest.config.chunks).toBeDefined();
@@ -78,7 +78,7 @@ describe("experimental.chunks", () => {
 		const manifestCode = (await load(plugin, "\0virtual:plaindown")) as string;
 		const manifestMatch = manifestCode?.match(/export const plaindownManifest = ({[\s\S]*?});/);
 		expect(manifestMatch).toBeDefined();
-		const manifest = JSON.parse(manifestMatch?.[1]);
+		const manifest = JSON.parse(manifestMatch?.[1] as string);
 
 		expect(manifest.config.chunks["no-category.md"]).toBe("_default");
 		expect(manifest.config.chunks["with-category.md"]).toBe("blog");
@@ -143,7 +143,7 @@ describe("experimental.chunks", () => {
 		const manifestCode = (await load(plugin, "\0virtual:plaindown")) as string;
 		const manifestMatch = manifestCode?.match(/export const plaindownManifest = ({[\s\S]*?});/);
 		expect(manifestMatch).toBeDefined();
-		const manifest = JSON.parse(manifestMatch?.[1]);
+		const manifest = JSON.parse(manifestMatch?.[1] as string);
 
 		expect(manifest.config.chunks["post.md"]).toBe("async");
 	});
@@ -189,7 +189,7 @@ describe("experimental.chunks", () => {
 		const manifestCode = (await load(plugin, "\0virtual:plaindown")) as string;
 		const manifestMatch = manifestCode?.match(/export const plaindownManifest = ({[\s\S]*?});/);
 		expect(manifestMatch).toBeDefined();
-		const manifest = JSON.parse(manifestMatch?.[1]);
+		const manifest = JSON.parse(manifestMatch?.[1] as string);
 
 		expect(manifest.config.chunks["blog-post.md"]).toBe("blog");
 		expect(manifest.config.chunks["docs-page.md"]).toBe("docs");
